@@ -14,7 +14,7 @@ def fetch_json_from_github(url):
 
 # Streamlit application
 def main():
-    st.title("Poet Information from GitHub")
+    st.title("Speculations...")
     df = pd.DataFrame({})
     # Input for the GitHub URL
     #url = st.text_input("Enter the GitHub raw JSON URL", "")
