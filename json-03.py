@@ -18,17 +18,17 @@ def main():
         try:
             # Fetch the JSON data from the provided URL
             data = fetch_json_from_github(url)
-                    try:
-                        astr = data.splitlines()
-                        for spec in astr:
-                            jstr = json.loads(spec)
-                            dt = pd.json_normalize(jstr) 
-                            if df.empty:
-                                df = dt
-                            else:       
-                                df = pd.concat([df, dt], ignore_index=True)
-                    except Exception as e:
-                        st.error(f"Error: {e}")
+            try:
+                astr = data.splitlines()
+                for spec in astr:
+                    jstr = json.loads(spec)
+                    dt = pd.json_normalize(jstr) 
+                    if df.empty:
+                        df = dt
+                    else:       
+                        df = pd.concat([df, dt], ignore_index=True)
+            except Exception as e:
+                st.error(f"Error: {e}")
         except Exception as e:
             st.error(f"Error: {e}")
 
