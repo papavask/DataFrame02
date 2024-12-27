@@ -2,7 +2,7 @@ import json
 import requests
 import streamlit as st
 import pandas as pd
-from pandas.io.json import json_normalize
+#from pandas.io.json import json_normalize
 
 # Function to fetch a JSON file from GitHub
 def fetch_json_from_github(url):
